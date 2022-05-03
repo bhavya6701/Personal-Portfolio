@@ -1,0 +1,195 @@
+body {
+    font-family: "Nunito Sans";
+}
+
+#myname {
+    font-family: 'Arima Madurai', cursive;
+    background: -webkit-linear-gradient(-315deg, #000000, #ff0090, #00ffff, #ffee00, #000000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    max-width: max-content;
+
+    background-size: 300%;
+    background-position: -100%;
+    animation: animate-name 10s linear 0s infinite alternate-reverse backwards;
+}
+
+.description {
+    font-size: large;
+    line-height: 250%;
+}
+
+.leftheader {
+    text-decoration: none;
+    color: #ffee00;
+}
+.leftheader:hover {
+    color: #ffffff;
+}
+
+#sidebar {
+    visibility: hidden;
+    position: fixed;
+    top: 25%;
+}
+
+.texthover:focus {
+    background-color: #292b2c;
+    caret-color: #00ffffd5;
+    color:#00ffffd5;
+}
+.texthover:focus::placeholder {
+    opacity: 0;
+}
+
+.navheader, .navheader2 {
+    width: fit-content;
+    text-decoration: none;
+    color: #ffffff !important;
+}
+.navheader:hover, .link:hover {
+    color: #ff0090 !important;
+}
+
+.navheader2:hover {
+    color: #ffee00 !important;
+}
+
+.progress-style {
+    height: 4px;
+}
+
+#background-image {
+    z-index: -1;
+    position:fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    opacity: 0.4;
+    background-image: url("https://images.unsplash.com/photo-1542903660-eedba2cda473?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100% 100%;
+}
+
+.img-skills {
+    height: 70%;
+}
+.img-skills2 {
+    height: 70%;
+}
+
+.progressbar-container {
+    position: relative;
+    padding: 10px;
+    border-radius: 4px;
+    background: #ffffff63;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+
+.ac-list {
+    background: transparent;
+}
+
+.bg-black2 {
+    background-color: #141414;
+}
+.bg-pink {
+    background-color: #ff0090;
+}
+.bg-yellow {
+    background-color: #ffee00dd;
+}
+.bg-cyan {
+    background-color: #00ffffd5;
+}
+.color-yellow {
+    color: #ffee00;
+}
+.color-cyan {
+    color: #00ffffd5 ;
+    text-shadow: 0px 0px 5px rgba(0, 242, 255, 0.841);
+}
+
+.border-white {
+    border-bottom: 1px solid #ffffff;
+}
+
+@keyframes animate-name {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 50%;
+      }
+    100% {
+      background-position: 100%;
+    }
+}
+    
+.loading {
+    background-color: #bdf4ff;
+}
+.loading1 {
+    animation: load1 5s normal;
+}
+.loading2 {
+    animation: load2 5s normal;
+}
+.loading3 {
+    animation: load3 5s normal;
+}
+.loading4 {
+    animation: load4 5s normal;
+}
+.loading5 {
+    animation: load5 5s normal;
+}
+.loading6 {
+    animation: load6 5s normal;
+}
+.loading7 {
+    animation: load7 5s normal;
+}
+.loading8 {
+    animation: load8 5s normal;
+}
+@keyframes load {
+    0% {background-color: #ffee00dd;}
+    100% {background-color: #00ffffd5;}
+}
+@keyframes load1 {
+    0% {width: 0%; background-color: #00ffffd5;}
+    100% {width: 90%; background-color: #ff0090;}
+}
+@keyframes load2 {
+    0% {width: 0%; background-color: #00ffffd5;}
+    100% {width: 80%; background-color: #ff0090;}
+}
+@keyframes load3 {
+    0% {width: 0%; background-color: #00ffffd5;}
+    100% {width: 45%; background-color: #ff0090;}
+}
+@keyframes load4 {
+    0% {width: 0%; background-color: #00ffffd5;}
+    100% {width: 70%; background-color: #ff0090;}
+}
+@keyframes load5 {
+    0% {width: 0%; background-color: #00ffffd5;}
+    100% {width: 85%; background-color: #ff0090;}
+}
+@keyframes load6 {
+    0% {width: 0%; background-color: #00ffffd5;}
+    100% {width: 65%; background-color: #ff0090;}
+}
+@keyframes load7 {
+    0% {width: 0%; background-color: #00ffffd5;}
+    100% {width: 65%; background-color: #ff0090;}
+}
+@keyframes load8 {
+    0% {width: 0%; background-color: #00ffffd5;}
+    100% {width: 30%; background-color: #ff0090;}
+}

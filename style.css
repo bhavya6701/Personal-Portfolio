@@ -1,3 +1,17 @@
+body {
+    font-family: "Nunito Sans";
+}
+
+#myname {
+    font-family: "Luckiest Guy";
+    animation: animate-name 2s linear 0s infinite alternate-reverse backwards;
+}
+
+.description {
+    font-size: large;
+    line-height: 250%;
+}
+
 .leftheader {
     text-decoration: none;
     color: #ffee00;
@@ -9,6 +23,7 @@
 #sidebar {
     visibility: hidden;
     position: fixed;
+    top: 25%;
 }
 
 .texthover:focus {
@@ -25,7 +40,7 @@
     text-decoration: none;
     color: #ffffff !important;
 }
-.navheader:hover {
+.navheader:hover, .link:hover {
     color: #ff0090 !important;
 }
 
@@ -48,24 +63,45 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
     background-size:100% 100%;
 }
 
 .bg-black2 {
     background-color: #141414;
 }
-
 .bg-pink {
     background-color: #ff0090;
 }
 .bg-yellow {
     background-color: #ffee00;
 }
-
 .color-yellow {
     color: #ffee00;
 }
 .color-cyan {
     color: #00FFFF ;
+}
+
+@keyframes animate-name {
+    0% {
+        background: -webkit-linear-gradient(rgb(69, 247, 253), rgba(244, 255, 254, 0.781));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+    }
+    50% {
+        background: -webkit-linear-gradient(rgb(69, 247, 253), rgba(244, 255, 254, 0.781));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0.5;
+      }
+    100% {
+        background: -webkit-linear-gradient(rgb(69, 247, 253), rgba(244, 255, 254, 0.781));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 1;
+    }
 }

@@ -1,5 +1,13 @@
+var arr = [];
+for(let i=0;i<=8;i++)
+    arr[i-1] = document.getElementById("loading" + i);
+
 window.addEventListener("scroll", scrollEvent);
 function scrollEvent() {
+    for(let i=0;i<8;i++)
+        if(isInViewPort(arr[i]))
+            arr[i].classList.add("loading" + (i+1));
+
     if(window.scrollY <= 50)
         document.getElementById("sidebar").style.visibility = "hidden";
     else {
@@ -25,4 +33,19 @@ function scrollEvent() {
         if(window.scrollY > 320)
             document.getElementById("sidebar").style.opacity = "1";
     }        
+}
+
+function isInViewPort(item) {
+    var bounding = item.getBoundingClientRect();
+    var myElementHeight = item.offsetHeight;
+    var myElementWidth = item.offsetWidth;
+
+    if(bounding.top >= -myElementHeight
+        && bounding.left >= -myElementWidth
+        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + myElementWidth
+        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + myElementHeight) {
+        return true;
+    } else {
+        return false;
+    }
 }

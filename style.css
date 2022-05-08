@@ -3,11 +3,17 @@ body {
 }
 
 #myname {
-    font-family: "Luckiest Guy";
-    background: -webkit-linear-gradient(rgb(69, 247, 253), rgba(244, 255, 254, 0.781));
+    font-family: 'Arima Madurai', cursive;
+    background: -webkit-linear-gradient(-315deg, #000000, #ff0090, #00ffff, #ffee00, #000000);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
+    max-width: max-content;
+
+    background-size: 300%;
+    background-position: -100%;
+    animation: animate-name 10s linear 0s infinite alternate-reverse backwards;
 }
 
 .description {
@@ -84,8 +90,40 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
 }
 
+.bg-black2 {
+    background-color: #141414;
+}
+.bg-pink {
+    background-color: #ff0090;
+}
+.bg-yellow {
+    background-color: #ffee00dd;
+}
+.color-yellow {
+    color: #ffee00;
+}
+.color-cyan {
+    color: #00ffffd5 ;
+}
+
+.border-pink {
+    border-bottom: 1px solid #ffffff;
+}
+
+@keyframes animate-name {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 50%;
+      }
+    100% {
+      background-position: 100%;
+    }
+}
+    
 .loading {
-    background-color: #00ffff;
+    background-color: #bdf4ff;
 }
 .loading1 {
     animation: load1 5s normal;
@@ -111,32 +149,10 @@ body {
 .loading8 {
     animation: load8 5s normal;
 }
-
-.bg-black2 {
-    background-color: #141414;
-}
-.bg-pink {
-    background-color: #ff0090;
-}
-.bg-yellow {
-    background-color: #ffee00dd;
-}
-.color-yellow {
-    color: #ffee00;
-}
-.color-cyan {
-    color: #00ffffd5 ;
-}
-
-.border-pink {
-    border-bottom: 1px solid #ffffff;
-}
-
 @keyframes load {
     0% {background-color: #ffee00dd;}
     100% {background-color: #00ffffd5;}
 }
-
 @keyframes load1 {
     0% {width: 0%; background-color: #00ffffd5;}
     100% {width: 90%; background-color: #ff0090;}
@@ -168,22 +184,4 @@ body {
 @keyframes load8 {
     0% {width: 0%; background-color: #00ffffd5;}
     100% {width: 60%; background-color: #ff0090;}
-}
-
-.animate-char:hover {
-    animation: animate-characters 2s infinite;
-}
-@keyframes animate-characters {
-    0%, 20%, 40%, 60%, 80%, 100%{
-        background: -webkit-linear-gradient(#ff0090, #f4fffec7);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    10%, 30%, 50%, 70%, 90% {
-        background: -webkit-linear-gradient(#f4fffec7, #ff0090);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
 }

@@ -73,21 +73,23 @@
 
                <!-- About -->
                <div class="container-fluid row py-5">
-                   <h1 class="display-5 d-md-none color-cyan border-bottom border-danger">ABOUT ME</h1>
+                   <h1 class="display-5 d-md-none color-cyan">ABOUT ME</h1>
                     <div class="col col-md-8">
                         <div class="container my-5 text-white description">
-                            <h1 class="display-1 color-cyan" id="myname">Hi, I am Bhavya!</h1>
+                            <h1 class="display-1 color-cyan" id="myname">
+                                <span class="animate-char">H</span><span class="animate-char">i</span><span class="animate-char">,</span> <span class="animate-char">I</span> <span class="animate-char">a</span><span class="animate-char">m</span> <span class="animate-char">B</span><span class="animate-char">h</span><span class="animate-char">a</span><span class="animate-char">v</span><span class="animate-char">y</span><span class="animate-char">a</span><span class="animate-char">!</span>
+                            </h1>
                             <p class="lead">- Computer Science Co-op Baccalaureate at Concordia University</p>
                             <div class="my-4">
                                 A problem solver with critical-thinking skills having high attention to detail. 
                                 Proficient in Java, C, JavaScript, HTML, CSS and Bootstrap Framework 
                                 Love to play chess, video games, outdoor activities and watch TV series. 
-                                Learning by exploring new things. Currently in <a class="link color-yellow" style="text-decoration: none;" href="https://goo.gl/maps/YYDHSSoLXz1dCRbS9"> <i class="bi bi-geo-fill"></i> Montreal, Canada. </a>
+                                Learning by exploring new things. Currently in <a class="link color-yellow text-decoration-none" target="_blank" href="https://goo.gl/maps/YYDHSSoLXz1dCRbS9"> <i class="bi bi-geo-fill"></i> Montreal, Canada. </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 offset-md-1">
-                        <img class="border-bottom border-danger pt-2 d-none d-md-flex" src="img_3.png" alt="" height="400px" id="about">
+                        <img class="border-pink pt-2 d-none d-md-flex" src="img_3.png" alt="" height="400px" id="about">
                         <div class="display-5 color-cyan d-none d-md-flex px-2">ABOUT ME</div>
                     </div>
                </div>
@@ -95,90 +97,137 @@
 
                 <!-- Skills -->
                 <div class="container py-5">
-                    <div class="display-5 color-cyan pt-2 border-bottom border-danger" id="skills">SKILLS</div>
+                    <div class="display-5 color-cyan pt-2 border-pink" id="skills">SKILLS</div>
                     <div class="row mt-4 py-3 d-flex justify-content-around">
-                        <div class="col-md-3 d-flex align-items-stretch py-4">
-                            <div class="card bg-info">
-                                <img src="https://wallpapercave.com/wp/wp7250161.png" class="card-img-top" alt="...">
+                        <div class="col-md-3 d-flex align-items-stretch">
+                            <div class="card loading">
+                                <img src="https://wallpapercave.com/wp/wp7250161.png" class="card-img-top img-skills" alt="...">
                                 <div class="card-body">
-                                    <h6 class="card-title"> Java</h6>
-                                    <div class="progress progress-style bg-dark mt-4">
-                                        <div class="progress-bar bg-pink" style="width: 90%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90"></div>
+                                    <h5 class="card-title"><i class="bi bi-filetype-java"></i> Java</h5>
+                                    <p>Skill Level: Proficient</p>
+                                    <div class="container progressbar-container">
+                                        <div class="progress progress-style bg-dark">
+                                            <div class="progress-bar bg-pink" id="loading1" style="width: 90%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div> 
                         </div>                           
-                        <div class="col-md-3 d-lg-flex align-items-stretch py-4">
-                            <div class="card bg-info">
-                                <img src="https://analyticsindiamag.com/wp-content/uploads/2019/10/Blog-Object-Oriented-Programming.jpg" class="card-img-top" alt="...">
+                        <div class="col-md-3 d-lg-flex align-items-stretch">
+                            <div class="card loading">
+                                <img src="https://analyticsindiamag.com/wp-content/uploads/2019/10/Blog-Object-Oriented-Programming.jpg" class="card-img-top img-skills" alt="...">
                                 <div class="card-body">
-                                    <h6 class="card-title">Object-Oriented Programming</h6>
-                                    <div class="progress progress-style bg-dark mt-4">
-                                        <div class="progress-bar bg-yellow" style="width: 80%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"></div>
+                                    <h5 class="card-title"><i class="bi bi-file-earmark-code"></i> Object-Oriented Programming</h5>
+                                    <p>Skill Level: Proficient</p>
+                                    <div class="container progressbar-container">
+                                        <div class="progress progress-style bg-dark">
+                                            <div class="progress-bar bg-pink" id="loading2" style="width: 80%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div> 
                         </div>  
-                        <div class="col-md-3 d-flex align-items-stretch py-4">
-                            <div class="card bg-info">
-                                <img src="https://wallpapercave.com/wp/wp2465927.jpg" class="card-img-top" alt="...">
+                        <div class="col-md-3 d-flex align-items-stretch">
+                            <div class="card loading">
+                                <img src="https://wallpapercave.com/wp/wp2465927.jpg" class="card-img-top img-skills" alt="...">
                                 <div class="card-body">
-                                    <h6 class="card-title">JavaScript</h6>
-                                    <div class="progress progress-style bg-dark mt-4">
-                                        <div class="progress-bar bg-pink" style="width: 60%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"></div>
+                                    <h5 class="card-title"><i class="bi bi-filetype-js"></i> JavaScript</h5>
+                                    <p>Skill Level: Advanced Beginner</p>
+                                    <div class="container progressbar-container">
+                                        <div class="progress progress-style bg-dark">
+                                            <div class="progress-bar bg-pink" id="loading3" style="width: 60%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div> 
-                        </div>                                                                                   
+                        </div>   
+                        <div class="col-md-3 d-flex align-items-stretch">
+                            <div class="card loading">
+                                <img src="https://mrstudent.in/wp-content/uploads/2021/08/creative-css3-tutorials.jpg" class="card-img-top img-skills" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-filetype-css"></i> CSS</h5>
+                                    <p>Skill Level: Competent</p>
+                                    <div class="container progressbar-container">
+                                        <div class="progress progress-style bg-dark">
+                                            <div class="progress-bar bg-pink" id="loading4" style="width: 65%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>                                                                                 
                     </div>
-                    <div class="row mt-4 py-3 d-lg-flex justify-content-around">
-                        <div class="col-md-3 d-flex align-items-stretch py-4">
-                            <div class="card bg-info">
-                                <img src="https://mrstudent.in/wp-content/uploads/2021/08/creative-css3-tutorials.jpg" class="card-img-top" alt="...">
+                    <div class="row mt-4 py-3 d-flex justify-content-around">
+                        <div class="col-md-3 d-flex align-items-stretch">
+                            <div class="card loading">
+                                <img src="https://wallpapercave.com/wp/wp3181467.jpg" class="card-img-top img-skills2" alt="...">
                                 <div class="card-body">
-                                    <h6 class="card-title">CSS</h6>
-                                   <div class="progress progress-style bg-dark mt-4">
-                                        <div class="progress-bar bg-yellow" style="width: 65%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65"></div>
+                                    <h5 class="card-title"><i class="bi bi-filetype-html"></i> HTML</h5>
+                                    <p>Skill Level: Proficient</p>
+                                    <div class="container progressbar-container">
+                                        <div class="progress progress-style bg-dark">
+                                            <div class="progress-bar bg-pink" id="loading5" style="width: 85%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>                      
+                        <div class="col-md-3 d-flex align-items-stretch">
+                            <div class="card loading">
+                                <img src="https://wallpaperaccess.com/full/4623107.png" class="card-img-top img-skills2" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-bootstrap"></i> Bootstrap</h5>
+                                    <p>Skill Level: Competent</p>
+                                    <div class="container progressbar-container">
+                                        <div class="progress progress-style bg-dark">
+                                            <div class="progress-bar bg-pink" id="loading6" style="width: 60%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div> 
                         </div> 
-                        <div class="col-md-3 d-flex align-items-stretch py-4">
-                            <div class="card bg-info">
-                                <img src="https://wallpapercave.com/wp/wp3181467.jpg" class="card-img-top" alt="...">
+                        <div class="col-md-3 d-flex align-items-stretch">
+                            <div class="card loading">
+                                <img src="https://wallpapercave.com/wp/wp7241557.png" class="card-img-top img-skills2" alt="...">
                                 <div class="card-body">
-                                    <h6 class="card-title">HTML</h6>
-                                    <div class="progress progress-style bg-dark mt-4">
-                                        <div class="progress-bar bg-pink" style="width: 85%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"></div>
+                                    <h5 class="card-title"><i class="bi bi-journal-code"></i> Virtual Studio Code</h5>
+                                    <p>Skill Level: Competent</p>
+                                    <div class="container progressbar-container">
+                                        <div class="progress progress-style bg-dark">
+                                            <div class="progress-bar bg-pink" id="loading7" style="width: 60%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div> 
                         </div> 
-                        <div class="col-md-3 d-flex align-items-stretch py-4">
-                            <div class="card bg-info">
-                                <img src="https://wallpaperaccess.com/full/4623107.png" class="card-img-top" alt="...">
+                        <div class="col-md-3 d-flex align-items-stretch">
+                            <div class="card loading">
+                                <img src="https://static.skillshare.com/uploads/discussion/tmp/7ab1b040.png" class="card-img-top img-skills2" alt="...">
                                 <div class="card-body">
-                                    <h6 class="card-title">Bootstrap</h6>
-                                    <div class="progress progress-style bg-dark mt-4">
-                                        <div class="progress-bar bg-yellow progress-bar-animated progress-bar-striped" style="width: 60%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"></div>
+                                    <h5 class="card-title"><i class="bi bi-filetype-cs"></i> C#</h5>
+                                    <p>Skill Level: Novice</p>
+                                    <div class="container progressbar-container">
+                                        <div class="progress progress-style bg-dark">
+                                            <div class="progress-bar bg-pink" id="loading8" style="width: 60%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div> 
-                        </div>                                                       
+                        </div>                                                                                  
                     </div>
                 </div>
 
 
                 <!-- Projects -->
                 <div class="container-fluid py-5">
-                    <div class="display-5 color-cyan pt-2 border-bottom border-danger" id="projects">PROJECTS</div>
+                    <div class="display-5 color-cyan pt-2 border-pink" id="projects">PROJECTS</div>
                 </div>
 
 
                 <!-- Contact -->
                 <div class="container-fluid py-5">
-                    <div class="display-5 color-cyan pt-2 border-bottom border-danger" id="contact">CONTACT ME</div>
+                    <div class="display-5 color-cyan pt-2 border-pink" id="contact">CONTACT ME</div>
                     <div class="col-10">
+                        <div class="lead text-white mt-4 fs-5">I’m interested in working with you and open to new opportunities. However, if you have other request or question, drop a message!</div>
                         <form class="form-inline">
                             <div class="row my-3">
                                 <div class="input-group col-lg mt-3 my-md-none">
@@ -205,8 +254,13 @@
                             <div class="form-group my-3">
                                 <textarea id="message" type="text" class="form-control texthover" rows="5" placeholder="Message" autocomplete="off"></textarea>
                             </div>  
-                            <button class="btn btn-outline-light">Send Message!</button>
+                            <div class="d-flex text-center justify-content-between">
+                                <button class="btn btn-outline-light">Send Message!</button> 
+                                <div class="lead text-white fs5">To know more about me, download my <a href="Bhavya Ruparelia Resume.pdf" download="Bhavya Ruparelia Resume" target="_blank" class="link color-yellow text-decoration-none">Resume <i class="bi bi-file-earmark-person"></i></a></div>
+                            </div>
+                            
                         </form>
+                        
                     </div>
                 </div>
            </div>
@@ -215,7 +269,7 @@
 
 
     <footer id="footer">
-        
+        <div class="container-fluid text-white"></div>
     </footer>
 
 

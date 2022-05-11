@@ -49,3 +49,57 @@ function isInViewPort(item) {
         return false;
     }
 }
+
+var form = document.getElementById("contact-form");
+form.addEventListener("submit", validate);
+
+function validate(e) {
+    e.preventDefault();
+
+    var name = form["name"].value.trim();
+    var email = form["email"].value.trim();
+    var subject = form["subject"].value.trim();
+    var message = form["message"].value.trim();
+    var Eselect = document.getElementById("email-select");
+    var select = Eselect.options[Eselect.selectedIndex].text;
+
+    var email_Id = email;
+    if(select != "Other (specify)")
+        email_Id += select;
+
+    let validName = validateName(name);
+    let validEmail = validateEmail(email, email_Id);
+
+    if(!validName)
+        alert("Invalid Name, submit the form with correct credentials!");
+    if(!validEmail)
+        alert("Invalid Email, submit the form with correct credentials!");
+    
+    if(validEmail && validName) {
+        window.location.href = "mailto:bhavyaruparelia@gmail.com?subject=" + subject + "&body=" + message;
+        form.reset();
+    }
+}
+
+function validateName(name) {
+	if (name === "")
+		return false;
+
+	const nameRegex = /^[a-zA-Z ]+$/;
+	if (!nameRegex.test(name))
+		return false;
+
+	return true;
+}
+
+function validateEmail(email, email_Id) {
+	if (email === "")
+		return false;
+    console.log(email_Id);
+
+	const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if (!emailRegex.test(email_Id))
+		return false;
+
+	return true;
+}

@@ -37,8 +37,8 @@ body {
 
 .texthover:focus {
     background-color: #292b2c;
-    caret-color: white;
-    color:white;
+    caret-color: #00ffffd5;
+    color:#00ffffd5;
 }
 .texthover:focus::placeholder {
     opacity: 0;
@@ -76,7 +76,7 @@ body {
 }
 
 .img-skills {
-    height: 50%;
+    height: 70%;
 }
 .img-skills2 {
     height: 70%;
@@ -99,14 +99,18 @@ body {
 .bg-yellow {
     background-color: #ffee00dd;
 }
+.bg-cyan {
+    background-color: #00ffffd5;
+}
 .color-yellow {
     color: #ffee00;
 }
 .color-cyan {
     color: #00ffffd5 ;
+    text-shadow: 0px 0px 5px rgba(0, 242, 255, 0.841);
 }
 
-.border-pink {
+.border-white {
     border-bottom: 1px solid #ffffff;
 }
 
@@ -163,11 +167,11 @@ body {
 }
 @keyframes load3 {
     0% {width: 0%; background-color: #00ffffd5;}
-    100% {width: 60%; background-color: #ff0090;}
+    100% {width: 45%; background-color: #ff0090;}
 }
 @keyframes load4 {
     0% {width: 0%; background-color: #00ffffd5;}
-    100% {width: 65%; background-color: #ff0090;}
+    100% {width: 70%; background-color: #ff0090;}
 }
 @keyframes load5 {
     0% {width: 0%; background-color: #00ffffd5;}
@@ -175,13 +179,13 @@ body {
 }
 @keyframes load6 {
     0% {width: 0%; background-color: #00ffffd5;}
-    100% {width: 60%; background-color: #ff0090;}
+    100% {width: 65%; background-color: #ff0090;}
 }
 @keyframes load7 {
     0% {width: 0%; background-color: #00ffffd5;}
-    100% {width: 60%; background-color: #ff0090;}
+    100% {width: 65%; background-color: #ff0090;}
 }
 @keyframes load8 {
     0% {width: 0%; background-color: #00ffffd5;}
-    100% {width: 60%; background-color: #ff0090;}
+    100% {width: 30%; background-color: #ff0090;}
 }

@@ -1,9 +1,9 @@
 var arr = [];
-for (let i = 1; i <= 8; i++) arr[i - 1] = document.getElementById("loading" + i);
+for (let i = 1; i <= 4; i++) arr[i - 1] = document.getElementById("loading" + i);
 
 window.addEventListener("scroll", scrollEvent);
 function scrollEvent() {
-	for (let i = 0; i < 8; i++) if (isInViewPort(arr[i])) arr[i].classList.add("loading" + (i + 1));
+	for (let i = 0; i < 4; i++) if (isInViewPort(arr[i])) arr[i].classList.add("loading" + (i + 1));
 
 	if (window.scrollY <= 50) document.getElementById("sidebar").style.visibility = "hidden";
 	else {

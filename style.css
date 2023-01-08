@@ -60,7 +60,7 @@ body {
 }
 
 .progress-style {
-	height: 4px;
+	height: 8px;
 }
 
 #background-image {
@@ -69,7 +69,9 @@ body {
 	height: 100%;
 	width: 100%;
 	margin: 0;
-	opacity: 0.4;
+	opacity: 0.5;
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
 	background-image: url("https://images.unsplash.com/photo-1542903660-eedba2cda473?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -82,14 +84,6 @@ body {
 }
 .img-skills2 {
 	height: 70%;
-}
-
-.progressbar-container {
-	position: relative;
-	padding: 10px;
-	border-radius: 4px;
-	background: #ffffff63;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .ac-list {
@@ -164,7 +158,7 @@ body {
 		background-color: #ffee00dd;
 	}
 	100% {
-		background-color: #00ffffd5;
+		background-color: #ff0090;
 	}
 }
 @keyframes load1 {
@@ -173,8 +167,8 @@ body {
 		background-color: #00ffffd5;
 	}
 	100% {
-		width: 90%;
-		background-color: #ff0090;
+		width: 80%;
+		background-color: #ffee00dd;
 	}
 }
 @keyframes load2 {
@@ -183,8 +177,8 @@ body {
 		background-color: #00ffffd5;
 	}
 	100% {
-		width: 80%;
-		background-color: #ff0090;
+		width: 70%;
+		background-color: #ffee00dd;
 	}
 }
 @keyframes load3 {
@@ -193,8 +187,8 @@ body {
 		background-color: #00ffffd5;
 	}
 	100% {
-		width: 45%;
-		background-color: #ff0090;
+		width: 60%;
+		background-color: #ffee00dd;
 	}
 }
 @keyframes load4 {
@@ -203,47 +197,7 @@ body {
 		background-color: #00ffffd5;
 	}
 	100% {
-		width: 70%;
-		background-color: #ff0090;
-	}
-}
-@keyframes load5 {
-	0% {
-		width: 0%;
-		background-color: #00ffffd5;
-	}
-	100% {
 		width: 85%;
-		background-color: #ff0090;
-	}
-}
-@keyframes load6 {
-	0% {
-		width: 0%;
-		background-color: #00ffffd5;
-	}
-	100% {
-		width: 65%;
-		background-color: #ff0090;
-	}
-}
-@keyframes load7 {
-	0% {
-		width: 0%;
-		background-color: #00ffffd5;
-	}
-	100% {
-		width: 65%;
-		background-color: #ff0090;
-	}
-}
-@keyframes load8 {
-	0% {
-		width: 0%;
-		background-color: #00ffffd5;
-	}
-	100% {
-		width: 30%;
-		background-color: #ff0090;
+		background-color: #ffee00dd;
 	}
 }

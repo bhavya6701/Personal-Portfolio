@@ -4,7 +4,7 @@ body {
 
 #myname {
 	font-family: "Arima Madurai", cursive;
-	background: -webkit-linear-gradient(-315deg, #000000, #ff0090, #00ffff, #ffee00, #000000);
+	background: -webkit-linear-gradient(-315deg, #ffee00, #00ffff, #ffee00, #00ffff);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;

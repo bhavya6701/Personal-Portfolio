@@ -1,0 +1,40 @@
+.icon {
+  color: white;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #00eeff !important;
+  filter: drop-shadow(0 0 1rem #00eeff)  !important;
+}
+
+.nav-active {
+  color: #eeff00ee ;
+  filter: drop-shadow(0 0 1rem #eeff00);
+}
+
+.music-pause {
+  color: white;
+  animation: rotate 5s linear infinite;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.music-play {
+  color: #eeff00;
+  filter: drop-shadow(0 0 0.5rem #eeff00);
+  animation: rotate 5s linear infinite;
+  animation-play-state: running;
+}
+
+/* Rotate animation on music click */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

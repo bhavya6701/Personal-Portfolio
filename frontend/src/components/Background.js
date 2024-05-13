@@ -90,8 +90,8 @@ export default function Background() {
     let verticalAngle = Math.PI / 4;
 
     var animate = function () {
-      horizontalAngle += 0.0025;
-      verticalAngle += 0.00125;
+      horizontalAngle += 0.00125;
+      verticalAngle += 0.000625;
 
       camera.position.x = Math.sin(horizontalAngle) * orbitRadius;
       camera.position.y = Math.sin(verticalAngle) * orbitRadius;

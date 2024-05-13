@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  Pompiere,
-  Shadows_Into_Light,
-  Shadows_Into_Light_Two,
-} from "next/font/google";
+import { Pompiere } from "next/font/google";
 
 import React from "react";
 import { useRef } from "react";
@@ -17,12 +13,6 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   Link,
-  DropdownItem,
-  DropdownTrigger,
-  Dropdown,
-  DropdownMenu,
-  Avatar,
-  Button,
 } from "@nextui-org/react";
 
 import { Icon } from "@iconify/react";
@@ -53,7 +43,12 @@ export default function CustomNavbar() {
   const menuItems = ["About", "Achievements", "Projects", "Contact"];
 
   return (
-    <Navbar isBordered maxWidth={"full"} onMenuOpenChange={setIsMenuOpen} className="navbar">
+    <Navbar
+      isBordered
+      maxWidth={"full"}
+      onMenuOpenChange={setIsMenuOpen}
+      className="navbar"
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}

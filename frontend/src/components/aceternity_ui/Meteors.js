@@ -1,5 +1,4 @@
 import { cn } from "@/utils/cn";
-import clsx from "clsx";
 import React from "react";
 
 export const Meteors = ({ number, className }) => {
@@ -16,9 +15,9 @@ export const Meteors = ({ number, className }) => {
           )}
           style={{
             top: 0,
-            left: Math.floor(Math.random() * (400 - -400) + -400) + "px",
-            animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + "s",
-            animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + "s",
+            left: Math.floor(Math.random() * 1000 - 400) + "px",
+            animationDelay: Math.random() * 0.5 + 0.5 + "s",
+            animationDuration: Math.floor(Math.random() * 8 + 2) + "s",
           }}
         ></span>
       ))}

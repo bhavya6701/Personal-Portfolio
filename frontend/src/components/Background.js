@@ -1,12 +1,11 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { RenderPass } from "/node_modules/three/examples/jsm/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "/node_modules/three/examples/jsm/postprocessing/UnrealBloomPass.js";
 import { EffectComposer } from "/node_modules/three/examples/jsm/postprocessing/EffectComposer.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-
-import { useEffect, useRef } from "react";
 
 const star_color_shades = [
   "#2596be",
@@ -86,7 +85,7 @@ export default function Background() {
 
     camera.position.z = 5;
     const orbitRadius = 25;
-    let horizontalAngle = 0; 
+    let horizontalAngle = 0;
     let verticalAngle = Math.PI / 4;
 
     var animate = function () {

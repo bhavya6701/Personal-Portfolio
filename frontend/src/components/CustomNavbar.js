@@ -1,9 +1,10 @@
 "use client";
 
-import { Pompiere } from "next/font/google";
-
+import "./CustomNavbar.css";
 import React from "react";
 import { useRef } from "react";
+import { Pompiere } from "next/font/google";
+import { Icon } from "@iconify/react";
 import {
   Navbar,
   NavbarBrand,
@@ -14,9 +15,6 @@ import {
   NavbarMenuItem,
   Link,
 } from "@nextui-org/react";
-
-import { Icon } from "@iconify/react";
-import "./CustomNavbar.css";
 
 const font_pompiere = Pompiere({ weight: "400", subsets: ["latin"] });
 
@@ -133,7 +131,7 @@ export default function CustomNavbar() {
                 isMusicPlaying ? "music-play" : "music-pause"
               }`}
             />
-            <audio ref={audioRef} src="/assets/Siddhi_Beyond_Paradise.mp3" />
+            <audio ref={audioRef} src="/assets/audio/Siddhi_Beyond_Paradise.mp3" />
           </Link>
         </NavbarItem>
       </NavbarContent>

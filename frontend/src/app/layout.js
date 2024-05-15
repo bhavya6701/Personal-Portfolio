@@ -1,5 +1,5 @@
-import { Sono } from "next/font/google";
 import "./globals.css";
+import { Sono } from "next/font/google";
 import { Providers } from "./providers";
 
 const font_sono = Sono({ weight: "200", subsets: ["latin"] });

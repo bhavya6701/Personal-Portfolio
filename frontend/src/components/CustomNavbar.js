@@ -38,7 +38,7 @@ export default function CustomNavbar() {
     setIsMusicPlaying(!isMusicPlaying);
   };
 
-  const menuItems = ["About", "Achievements", "Projects", "Contact"];
+  const menuItems = ["About", "TIMELINE", "Projects", "Contact"];
 
   return (
     <Navbar
@@ -80,7 +80,7 @@ export default function CustomNavbar() {
             }`}
             onClick={() => updateNavCompActive(1)}
           >
-            ACHIEVEMENTS
+            TIMELINE
           </Link>
         </NavbarItem>
         <NavbarItem>

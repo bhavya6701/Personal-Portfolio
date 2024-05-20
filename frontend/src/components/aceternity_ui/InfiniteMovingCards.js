@@ -97,13 +97,12 @@ export const InfiniteMovingCards = ({
                 classNames={{
                   base: "max-w-md",
                   track: "drop-shadow-md border border-default",
-                  indicator: "bg-gradient-to-r from-pink-500 to-yellow-500",
-                  label: "tracking-wider font-medium text-default-600",
-                  value: "text-foreground/60",
+                  indicator: "bg-gradient-to-r from-cyan-500 to-yellow-500",
+                  label: "tracking-wider text-default-900",
                 }}
                 label="Knowledge"
                 value={item.knowledge}
-                showValueLabel={true}
+                showValueLabel={false}
               />
 
               <Progress
@@ -112,13 +111,12 @@ export const InfiniteMovingCards = ({
                 classNames={{
                   base: "max-w-md",
                   track: "drop-shadow-md border border-default",
-                  indicator: "bg-gradient-to-r from-pink-500 to-yellow-500",
-                  label: "tracking-wider font-medium text-default-600",
-                  value: "text-foreground/60",
+                  indicator: "bg-gradient-to-r from-cyan-500 to-yellow-500",
+                  label: "tracking-wider text-default-900",
                 }}
                 label="Experience"
                 value={item.experience}
-                showValueLabel={true}
+                showValueLabel={false}
               />
             </div>
           </li>

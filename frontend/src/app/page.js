@@ -2,6 +2,7 @@ import "./page.css";
 import About from "@/components/About";
 import Background from "@/components/Background";
 import CustomNavbar from "@/components/CustomNavbar";
+import Timeline from "@/components/Timeline";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <div className="content">
         <CustomNavbar />
         <About />
+        <Timeline />
       </div>
     </main>
   );

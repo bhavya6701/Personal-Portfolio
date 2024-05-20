@@ -5,13 +5,14 @@ import { Icon } from "@iconify/react";
 import "./Timeline.css";
 
 export default function Timeline() {
-  var activeList = [false, false, false, false, false, false, false];
-  const [isActive, setIsActive] = React.useState(activeList);
+  const [isActive, setIsActive] = React.useState(-1);
 
   const handleActive = (e, index) => {
-    activeList.fill(false);
-    activeList[index] = !isActive[index];
-    setIsActive(activeList);
+    if (isActive == index) {
+      setIsActive(-1);
+    } else {
+      setIsActive(index);
+    }
   };
 
   return (
@@ -37,7 +38,7 @@ export default function Timeline() {
         startContent={
           <Icon
             icon="material-symbols-light:developer-mode-tv-outline"
-            className={isActive[6] ? "background-shadow" : ""}
+            className={isActive == 6 ? "background-shadow" : ""}
             width="2em"
             height="2em"
           />
@@ -62,7 +63,7 @@ export default function Timeline() {
         startContent={
           <Icon
             icon="material-symbols-light:developer-mode-tv-outline"
-            className={isActive[5] ? "background-shadow" : ""}
+            className={isActive == 5 ? "background-shadow" : ""}
             width="2em"
             height="2em"
           />
@@ -100,7 +101,7 @@ export default function Timeline() {
         startContent={
           <Icon
             icon="material-symbols-light:developer-mode-tv-outline"
-            className={isActive[4] ? "background-shadow" : ""}
+            className={isActive == 4 ? "background-shadow" : ""}
             width="2em"
             height="2em"
           />
@@ -133,7 +134,7 @@ export default function Timeline() {
         startContent={
           <Icon
             icon="map:university"
-            className={isActive[3] ? "background-shadow" : ""}
+            className={isActive == 3 ? "background-shadow" : ""}
             width="2em"
             height="2em"
           />
@@ -155,7 +156,7 @@ export default function Timeline() {
         startContent={
           <Icon
             icon="material-symbols-light:developer-mode-tv-outline"
-            className={isActive[2] ? "background-shadow" : ""}
+            className={isActive == 2 ? "background-shadow" : ""}
             width="2em"
             height="2em"
           />
@@ -181,7 +182,7 @@ export default function Timeline() {
         startContent={
           <Icon
             icon="map:university"
-            className={isActive[1] ? "background-shadow" : ""}
+            className={isActive == 1 ? "background-shadow" : ""}
             width="2em"
             height="2em"
           />
@@ -202,7 +203,7 @@ export default function Timeline() {
         startContent={
           <Icon
             icon="map:university"
-            className={isActive[0] ? "background-shadow" : ""}
+            className={isActive == 0 ? "background-shadow" : ""}
             width="2em"
             height="2em"
           />

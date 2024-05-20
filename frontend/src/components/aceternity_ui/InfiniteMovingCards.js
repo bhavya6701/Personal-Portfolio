@@ -18,7 +18,7 @@ export const InfiniteMovingCards = ({
   useEffect(() => {
     const timer = setTimeout(() => {
       addAnimation();
-    }, 1000); // Delay for 1 second
+    }, 5000); // Delay for 5 second
 
     return () => clearTimeout(timer);
   }, []);

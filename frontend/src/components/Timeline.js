@@ -12,7 +12,6 @@ export default function Timeline() {
     activeList.fill(false);
     activeList[index] = !isActive[index];
     setIsActive(activeList);
-    console.log(activeList);
   };
 
   return (
@@ -20,12 +19,13 @@ export default function Timeline() {
       variant="shadow"
       className="my-20 p-4 flex flex-col gap-4 w-full max-w-[1000px] mx-auto bg-black bg-opacity-80"
       itemClasses={{
-        base: "rounded-lg p-2 mx-4 border border-white border-opacity-20",
-        heading: "font-semibold text-lg",
-        subtitle: "text-sm text-default-900",
+        base: "rounded-lg p-4 mx-4 border border-white border-opacity-20",
+        heading: "text-sm lg:text-lg",
+        title: "font-semibold text-base md:text-base lg:text-lg",
+        subtitle: "text-default-900",
         trigger: "h-14 flex items-center",
-        indicator: "text-large background-shadow",
-        content: "text-small ps-4",
+        indicator: "background-shadow",
+        content: "text-sm md:text-base lg:text-base  ps-4",
       }}
       showDivider={false}
     >
@@ -143,8 +143,8 @@ export default function Timeline() {
         <ul>
           <li>• Institute: Concordia University</li>
           <li>• Location: Montreal, Quebec, Canada</li>
-          <li>• Grade: 3.7/4.3</li>
           <li>• Dean's List: 2021-2022</li>
+          <li>• Grade: 3.7/4.3</li>
         </ul>
       </AccordionItem>
       <AccordionItem

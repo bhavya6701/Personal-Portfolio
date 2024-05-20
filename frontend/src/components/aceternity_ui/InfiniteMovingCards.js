@@ -18,7 +18,7 @@ export const InfiniteMovingCards = ({
   useEffect(() => {
     const timer = setTimeout(() => {
       addAnimation();
-    }, 5000); // Delay for 5 second
+    }, 1000); // Delay for 1 second
 
     return () => clearTimeout(timer);
   }, []);
@@ -61,7 +61,7 @@ export const InfiniteMovingCards = ({
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "150s");
+        containerRef.current.style.setProperty("--animation-duration", "120s");
       }
     }
   };

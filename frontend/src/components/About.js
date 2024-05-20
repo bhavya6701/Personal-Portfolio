@@ -12,103 +12,103 @@ const font_arima = Arima({ weight: "400", subsets: ["latin"] });
 const testimonials = [
   {
     title: "DSA",
-    knowledge: 85,
-    experience: 75,
+    knowledge: 88,
+    experience: 77,
   },
   {
     title: "Computer Vision",
-    knowledge: 70,
+    knowledge: 77,
     experience: 80,
   },
   {
     title: "Deep Learning",
-    knowledge: 75,
-    experience: 70,
+    knowledge: 82,
+    experience: 74,
   },
   {
     title: "Machine Learning",
-    knowledge: 90,
+    knowledge: 95,
     experience: 90,
   },
   {
     title: "Git",
-    knowledge: 85,
-    experience: 95,
+    knowledge: 87,
+    experience: 94,
   },
   {
     title: "OpenCV",
     knowledge: 70,
-    experience: 75,
+    experience: 77,
   },
   {
     title: "Pandas",
-    knowledge: 70,
-    experience: 75,
+    knowledge: 68,
+    experience: 77,
   },
   {
     title: "PyTorch",
-    knowledge: 80,
-    experience: 85,
+    knowledge: 84,
+    experience: 88,
   },
   {
     title: "Python",
-    knowledge: 85,
-    experience: 95,
+    knowledge: 88,
+    experience: 94,
   },
   {
     title: "MySQL",
-    knowledge: 80,
-    experience: 65,
+    knowledge: 78,
+    experience: 72,
   },
   {
     title: "Spring Boot",
-    knowledge: 75,
-    experience: 80,
+    knowledge: 72,
+    experience: 75,
   },
   {
     title: "Java",
-    knowledge: 95,
-    experience: 95,
+    knowledge: 94,
+    experience: 88,
   },
   {
     title: "NextJS",
-    knowledge: 50,
-    experience: 20,
+    knowledge: 45,
+    experience: 68,
   },
   {
     title: "ReactJS",
-    knowledge: 85,
-    experience: 80,
+    knowledge: 82,
+    experience: 88,
   },
   {
     title: "JavaScript",
     knowledge: 75,
-    experience: 80,
+    experience: 88,
   },
   {
     title: "Tailwind",
     knowledge: 80,
-    experience: 70,
+    experience: 80,
   },
   {
     title: "CSS",
     knowledge: 70,
-    experience: 85,
+    experience: 77,
   },
   {
     title: "HTML",
-    knowledge: 80,
-    experience: 85,
+    knowledge: 82,
+    experience: 84,
   },
 ];
 
 export default function About() {
   return (
     <div>
-      <Card isBlurred className="dark:bg-default-100/50 m-auto mt-16 p-5 w-1/2">
+      <Card isBlurred className="dark:bg-default-100/50 m-auto mt-16 p-5 w-3/4 md:w-1/2">
         <CardBody>
-          <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center">
-            <div className="relative col-span-6 md:col-span-4">
+          <div className="grid grid-cols-6 lg:grid-cols-12 items-center justify-center">
+            <div className="relative col-span-6 lg:col-span-4">
               <Image
                 alt="The One"
                 className="object-cover"
@@ -118,7 +118,7 @@ export default function About() {
               />
             </div>
 
-            <div className="flex flex-col col-span-6 md:col-span-8 ps-5">
+            <div className="flex flex-col col-span-6 md:col-span-8 ps-5 pt-4 lg:pt-0">
               <h1 id="myname" className={font_arima.className}>
                 Hey, I am Bhavya!
               </h1>

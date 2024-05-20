@@ -38,7 +38,7 @@ export default function CustomNavbar() {
     setIsMusicPlaying(!isMusicPlaying);
   };
 
-  const menuItems = ["About", "TIMELINE", "Projects", "Contact"];
+  const menuItems = ["ABOUT", "TIMELINE", "PROJECTS", "CONTACT"];
 
   return (
     <Navbar

@@ -21,10 +21,10 @@ export default function Timeline() {
   return (
     <div>
       <h1
-        className={`text-center text-3xl lg:text-5xl mt-24 mb-8 background-shadow ${font_arima.className}`}
+        className={`text-center text-2xl lg:text-5xl mt-24 mb-8 background-shadow tracking-[0.5em] ${font_arima.className}`}
         id = "timeline"
       >
-        TIMELINE
+        T I M E L I N E
       </h1>
       <Accordion
         variant="shadow"

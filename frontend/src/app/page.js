@@ -10,6 +10,7 @@ export default function Home() {
       <Background />
 
       <div className="content">
+        <div id="about"></div>
         <CustomNavbar />
         <About />
         <Timeline />

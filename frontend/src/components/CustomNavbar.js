@@ -63,7 +63,7 @@ export default function CustomNavbar() {
       >
         <NavbarItem>
           <Link
-            href="#"
+            href="#about"
             className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 0 ? "nav-active" : ""
             }`}
@@ -74,7 +74,7 @@ export default function CustomNavbar() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="#"
+            href="#timeline"
             className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 1 ? "nav-active" : ""
             }`}
@@ -85,7 +85,7 @@ export default function CustomNavbar() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="#"
+            href="#projects"
             className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 2 ? "nav-active" : ""
             }`}
@@ -96,7 +96,7 @@ export default function CustomNavbar() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="#"
+            href="#contact"
             className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 3 ? "nav-active" : ""
             }`}

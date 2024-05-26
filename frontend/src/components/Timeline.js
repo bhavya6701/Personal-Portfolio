@@ -2,7 +2,6 @@
 import React, { act } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Icon } from "@iconify/react";
-import "./Timeline.css";
 import { Arima } from "next/font/google";
 
 const font_arima = Arima({ weight: "400", subsets: ["latin"] });
@@ -20,23 +19,24 @@ export default function Timeline() {
 
   return (
     <div>
+      <div id="timeline"></div>
       <h1
-        className={`text-center text-2xl lg:text-5xl mt-24 mb-8 background-shadow tracking-[0.5em] ${font_arima.className}`}
-        id = "timeline"
+        className={`text-center text-2xl lg:text-5xl pt-28 mb-8 background-shadow tracking-[0.4em] ${font_arima.className}`}
+        
       >
         T I M E L I N E
       </h1>
       <Accordion
         variant="shadow"
-        className=" p-4 flex flex-col gap-4 w-full max-w-[1000px] mx-auto bg-black bg-opacity-80"
+        className="p-4 flex flex-col gap-4 w-full max-w-[1400px] mx-auto dark:bg-default-100/50 backdrop-blur-md"
         itemClasses={{
-          base: "rounded-lg p-4 mx-4 border border-white border-opacity-60",
+          base: "rounded-lg p-4 border border-white border-opacity-40",
           heading: "text-sm lg:text-lg",
-          title: "font-semibold text-base md:text-base lg:text-lg",
-          subtitle: "text-default-900",
+          title: "font-semibold text-xs md:text-base lg:text-lg",
+          subtitle: "text-default-900 text-xs md:text-sm lg:text-base",
           trigger: "h-12 flex items-center",
           indicator: "background-shadow",
-          content: "text-sm md:text-base lg:text-base ps-4",
+          content: "text-xs md:text-sm lg:text-base ps-4",
         }}
         showDivider={false}
       >
@@ -48,13 +48,13 @@ export default function Timeline() {
           startContent={
             <Icon
               icon="material-symbols-light:developer-mode-tv-outline"
-              className={isActive == 6 ? "background-shadow" : ""}
+              className={isActive == 6 ? "timeline-active-indicator" : ""}
               width="2em"
               height="2em"
             />
           }
           itemClasses={{
-            indicator: "text-large background-shadow",
+            indicator: "text-large timeline-active-indicator",
           }}
           onPress={(e) => handleActive(e, 6)}
         >
@@ -73,7 +73,7 @@ export default function Timeline() {
           startContent={
             <Icon
               icon="material-symbols-light:developer-mode-tv-outline"
-              className={isActive == 5 ? "background-shadow" : ""}
+              className={isActive == 5 ? "timeline-active-indicator" : ""}
               width="2em"
               height="2em"
             />
@@ -111,7 +111,7 @@ export default function Timeline() {
           startContent={
             <Icon
               icon="material-symbols-light:developer-mode-tv-outline"
-              className={isActive == 4 ? "background-shadow" : ""}
+              className={isActive == 4 ? "timeline-active-indicator" : ""}
               width="2em"
               height="2em"
             />
@@ -144,7 +144,7 @@ export default function Timeline() {
           startContent={
             <Icon
               icon="map:university"
-              className={isActive == 3 ? "background-shadow" : ""}
+              className={isActive == 3 ? "timeline-active-indicator" : ""}
               width="2em"
               height="2em"
             />
@@ -166,7 +166,7 @@ export default function Timeline() {
           startContent={
             <Icon
               icon="material-symbols-light:developer-mode-tv-outline"
-              className={isActive == 2 ? "background-shadow" : ""}
+              className={isActive == 2 ? "timeline-active-indicator" : ""}
               width="2em"
               height="2em"
             />
@@ -192,7 +192,7 @@ export default function Timeline() {
           startContent={
             <Icon
               icon="map:university"
-              className={isActive == 1 ? "background-shadow" : ""}
+              className={isActive == 1 ? "timeline-active-indicator" : ""}
               width="2em"
               height="2em"
             />
@@ -213,7 +213,7 @@ export default function Timeline() {
           startContent={
             <Icon
               icon="map:university"
-              className={isActive == 0 ? "background-shadow" : ""}
+              className={isActive == 0 ? "timeline-active-indicator" : ""}
               width="2em"
               height="2em"
             />

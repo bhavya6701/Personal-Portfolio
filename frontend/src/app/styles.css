@@ -1,0 +1,100 @@
+/* Navbar Component */
+.navbar {
+  background-color: transparent !important;
+}
+
+.icon {
+  color: white;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #00eeff !important;
+  filter: drop-shadow(0 0 1rem #00eeff) !important;
+}
+
+.nav-active {
+  color: #eeff00ee;
+  filter: drop-shadow(0 0 1rem #eeff00);
+}
+
+.music-pause {
+  color: white;
+  animation: rotate 5s linear infinite;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.music-play {
+  color: #eeff00;
+  filter: drop-shadow(0 0 0.5rem #eeff00);
+  animation: rotate 5s linear infinite;
+  animation-play-state: running;
+}
+
+/* Rotate animation on music click */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* About Section */
+#myname {
+  font-size: 2.5rem;
+
+  /* color: #fff025 !important;
+  opacity: 0.95; */
+
+  background: -webkit-linear-gradient(
+    -315deg,
+    #00eeff,
+    #00eeff,
+    #ffee00,
+    #ffee00
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  max-width: max-content;
+
+  background-size: 300%;
+  background-position: -100%;
+  animation: animate-name 30s linear 0s infinite alternate-reverse backwards;
+}
+
+@keyframes animate-name {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 50%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.map-link {
+  color: #ffee00;
+}
+
+.map-link:hover {
+  color: #00ffff;
+}
+
+/* Timeline Section */
+.background-shadow {
+  color: #ffffffee !important;
+  text-shadow: 0 0 0.1rem #ffffff;
+}
+
+.timeline-active-indicator {
+  color: #ffee00 !important;
+}

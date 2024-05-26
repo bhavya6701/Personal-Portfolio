@@ -1,6 +1,5 @@
 "use client";
 
-import "./About.css";
 import React from "react";
 import Link from "next/link";
 import { Arima } from "next/font/google";
@@ -105,16 +104,18 @@ const testimonials = [
 export default function About() {
   return (
     <div>
-      <Card isBlurred className="dark:bg-default-100/50 m-auto mt-16 p-5 w-3/4 md:w-1/2">
+      <Card
+        className="dark:bg-default-100/50 m-auto my-20 p-1 w-3/4 md:w-1/2 backdrop-blur-md"
+      >
         <CardBody>
           <div className="grid grid-cols-6 lg:grid-cols-12 items-center justify-center">
-            <div className="relative col-span-6 lg:col-span-4">
+            <div className="relative col-span-6 lg:col-span-4 m-5">
               <Image
                 alt="The One"
                 className="object-cover"
                 src="/assets/images/profile_pic.jpg"
                 width="100%"
-                loading="lazy"
+                isBlurred
               />
             </div>
 
@@ -122,10 +123,10 @@ export default function About() {
               <h1 id="myname" className={font_arima.className}>
                 Hey, I am Bhavya!
               </h1>
-              <p className="text-medium text-foreground/60">
+              <p className="text-base text-foreground/60">
                 Computer Science Co-op Baccalaureate at Concordia University
               </p>
-              <h2 className="text-large text-pretty mt-6">
+              <h2 className="text-lg text-pretty mt-6">
                 Combining my Computer Science background with a focus on Machine
                 Learning and Software Development, I delve into the intricacies
                 of AI. Beyond coding, I find joy in playing chess, immersing
@@ -135,8 +136,9 @@ export default function About() {
                   className="map-link text-decoration-none"
                   href="https://goo.gl/maps/YYDHSSoLXz1dCRbS9"
                 >
-                  Montreal, Canada.
+                  Montreal, Canada
                 </Link>
+                .
               </h2>
             </div>
           </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import "./CustomNavbar.css";
 import React from "react";
 import { useRef } from "react";
 import { Pompiere } from "next/font/google";
@@ -39,7 +38,7 @@ export default function CustomNavbar() {
   };
 
   const menuItems = ["ABOUT", "TIMELINE", "PROJECTS", "CONTACT"];
-
+  
   return (
     <Navbar
       isBordered
@@ -131,7 +130,10 @@ export default function CustomNavbar() {
                 isMusicPlaying ? "music-play" : "music-pause"
               }`}
             />
-            <audio ref={audioRef} src="/assets/audio/Siddhi_Beyond_Paradise.mp3" />
+            <audio
+              ref={audioRef}
+              src="/assets/audio/Siddhi_Beyond_Paradise.mp3"
+            />
           </Link>
         </NavbarItem>
       </NavbarContent>

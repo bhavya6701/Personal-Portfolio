@@ -8,6 +8,7 @@ import {
   CardBody,
   CardFooter,
   Image,
+  link,
 } from "@nextui-org/react";
 
 const font_arima = Arima({ weight: "400", subsets: ["latin"] });
@@ -19,6 +20,7 @@ const items = [
     header: "ASL Recognition",
     className: "md:col-span-2",
     img: "/assets/images/asl_recognition.png",
+    link: "https://github.com/bhavya6701/ASL-Recognition"
   },
   {
     title: "Noted.",
@@ -26,6 +28,7 @@ const items = [
     header: "Noted.",
     className: "md:col-span-3",
     img: "/assets/images/noted.png",
+    link: "https://github.com/bhavya6701/Noted"
   },
   {
     title: "Covid-19 Database Management System",
@@ -34,6 +37,7 @@ const items = [
     header: "Covid-19 Database Management System",
     className: "md:col-span-3",
     img: "/assets/images/dbms.png",
+    link: "https://github.com/bhavya6701/Covid-19-Data-Management-System"
   },
   {
     title: "Digit and Alphabet Recognition",
@@ -41,6 +45,7 @@ const items = [
     header: "Digit and Alphabet Recognition",
     className: "md:col-span-2",
     img: "/assets/images/digit_alphabet_recognition.png",
+    link: "https://github.com/Devansh-Vaidya/Digit-Alphabet-Recognition"
   },
 ];
 
@@ -59,8 +64,8 @@ export default function Projects() {
             shadow="sm"
             key={index}
             isPressable
-            onPress={() => console.log("item pressed")}
-            className="dark:bg-default-100/50 backdrop-blur-sm"
+            onPress={() => window.open(item.link, "_blank")}
+            className="dark:bg-default-100/50 backdrop-blur-sm dark:hover:bg-white/10"
           >
             <CardBody className="overflow-visible flex flex-row gap-2">
               <div className="flex flex-col basis-2/5 text-center my-auto">

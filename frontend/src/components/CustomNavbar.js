@@ -133,6 +133,7 @@ export default function CustomNavbar() {
             <audio
               ref={audioRef}
               src="/assets/audio/Siddhi_Beyond_Paradise.mp3"
+              loop={true}
             />
           </Link>
         </NavbarItem>

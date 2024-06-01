@@ -92,7 +92,7 @@
 /* Timeline Section */
 .background-shadow {
   color: #ffffffee !important;
-  text-shadow: 0 0 0.1rem #ffffff;
+  text-shadow: 0 0 3rem #ffffffbd;
 }
 
 .timeline-active-indicator {

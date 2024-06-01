@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Pompiere } from "next/font/google";
 import { Icon } from "@iconify/react";
 import {
@@ -12,20 +11,20 @@ import {
   NavbarItem,
   NavbarMenu,
   NavbarMenuItem,
-  Link,
 } from "@nextui-org/react";
+import {Link} from "@nextui-org/link";
 
 const font_pompiere = Pompiere({ weight: "400", subsets: ["latin"] });
 
-export default function CustomNavbar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isMusicPlaying, setIsMusicPlaying] = React.useState(false);
-  const [navCompActive, setNavCompActive] = React.useState(0);
-
+export default function CustomNavbar({ activeIndex }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+  const [navCompActive, setNavCompActive] = useState(activeIndex);
   const audioRef = useRef();
 
   const updateNavCompActive = (index) => {
     setNavCompActive(index);
+    console.log(`Changed navCompActive from ${navCompActive} to ${index}`);
   };
 
   const updateAudioCommand = () => {
@@ -38,7 +37,7 @@ export default function CustomNavbar() {
   };
 
   const menuItems = ["ABOUT", "TIMELINE", "PROJECTS", "CONTACT"];
-  
+
   return (
     <Navbar
       isBordered
@@ -62,18 +61,19 @@ export default function CustomNavbar() {
       >
         <NavbarItem>
           <Link
-            href="#about"
+            href="/#about"
             className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 0 ? "nav-active" : ""
             }`}
             onClick={() => updateNavCompActive(0)}
           >
+
             ABOUT
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="#timeline"
+            href="/#timeline"
             className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 1 ? "nav-active" : ""
             }`}
@@ -84,7 +84,7 @@ export default function CustomNavbar() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="#projects"
+            href="/#projects"
             className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 2 ? "nav-active" : ""
             }`}
@@ -95,7 +95,7 @@ export default function CustomNavbar() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="#contact"
+            href="/#contact"
             className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 3 ? "nav-active" : ""
             }`}

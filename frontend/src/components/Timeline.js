@@ -28,9 +28,9 @@ export default function Timeline() {
       </h1>
       <Accordion
         variant="shadow"
-        className="p-4 flex flex-col gap-4 w-full max-w-[1400px] mx-auto dark:bg-default-100/50 backdrop-blur-md"
+        className="p-4 flex flex-col gap-4 w-full max-w-[1200px] mx-auto dark:bg-default-100/50 backdrop-blur-md"
         itemClasses={{
-          base: "rounded-lg p-4 border border-white border-opacity-40",
+          base: "rounded-lg p-4 border border-white border-opacity-40 dark:hover:bg-white/10",
           heading: "text-sm lg:text-lg",
           title: "font-semibold text-xs md:text-base lg:text-lg",
           subtitle: "text-default-900 text-xs md:text-sm lg:text-base",

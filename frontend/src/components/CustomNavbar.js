@@ -16,10 +16,10 @@ import {Link} from "@nextui-org/link";
 
 const font_pompiere = Pompiere({ weight: "400", subsets: ["latin"] });
 
-export default function CustomNavbar({ activeIndex }) {
+export default function CustomNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
-  const [navCompActive, setNavCompActive] = useState(activeIndex);
+  const [navCompActive, setNavCompActive] = useState(0);
   const audioRef = useRef();
 
   const updateNavCompActive = (index) => {

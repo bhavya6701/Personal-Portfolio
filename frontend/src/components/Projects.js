@@ -1,14 +1,7 @@
 "use client";
 import React, { act } from "react";
 import { Arima } from "next/font/google";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Image,
-  link,
-} from "@nextui-org/react";
+import { Card, CardBody } from "@nextui-org/react";
 
 const font_arima = Arima({ weight: "400", subsets: ["latin"] });
 
@@ -73,9 +66,10 @@ export default function Projects() {
           >
             <CardBody className="overflow-visible flex flex-row gap-2">
               <div className="flex flex-col basis-7/12 text-center my-auto">
-                <h1 className="font-semibold text-xs md:text-base lg:text-lg p-2 background-shadow">
+               
+                <div className="font-semibold text-xs md:text-base lg:text-lg p-2 px-6 heading-color">
                   {item.header}
-                </h1>
+                </div>
                 <div className="text-xs md:text-sm lg:text-base text-balance p-2">
                   {item.description}
                 </div>

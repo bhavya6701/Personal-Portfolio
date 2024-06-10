@@ -12,7 +12,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import {Link} from "@nextui-org/link";
+import { Link } from "@nextui-org/link";
 
 const font_pompiere = Pompiere({ weight: "400", subsets: ["latin"] });
 
@@ -24,7 +24,6 @@ export default function CustomNavbar() {
 
   const updateNavCompActive = (index) => {
     setNavCompActive(index);
-    console.log(`Changed navCompActive from ${navCompActive} to ${index}`);
   };
 
   const updateAudioCommand = () => {
@@ -62,19 +61,18 @@ export default function CustomNavbar() {
         <NavbarItem>
           <Link
             href="/#about"
-            className={`text-md lg:text-xl xl:lg:text-2xl icon ${
+            className={`nav-link text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 0 ? "nav-active" : ""
             }`}
             onClick={() => updateNavCompActive(0)}
           >
-
             ABOUT
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
             href="/#timeline"
-            className={`text-md lg:text-xl xl:lg:text-2xl icon ${
+            className={`nav-link text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 1 ? "nav-active" : ""
             }`}
             onClick={() => updateNavCompActive(1)}
@@ -85,7 +83,7 @@ export default function CustomNavbar() {
         <NavbarItem>
           <Link
             href="/#projects"
-            className={`text-md lg:text-xl xl:lg:text-2xl icon ${
+            className={`nav-link text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 2 ? "nav-active" : ""
             }`}
             onClick={() => updateNavCompActive(2)}
@@ -96,7 +94,7 @@ export default function CustomNavbar() {
         <NavbarItem>
           <Link
             href="/#contact"
-            className={`text-md lg:text-xl xl:lg:text-2xl icon ${
+            className={`nav-link text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 3 ? "nav-active" : ""
             }`}
             onClick={() => updateNavCompActive(3)}

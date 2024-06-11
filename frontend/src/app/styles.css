@@ -14,8 +14,20 @@
 }
 
 .nav-active {
-  color: #eeff00ee;
-  filter: drop-shadow(0 0 1rem #eeff00);
+  animation: fadeInOutColorChange 5s forwards
+}
+
+/* One time gradient color change and back animation on nav-active header */
+@keyframes fadeInOutColorChange {
+  0% {
+    color: #00eeff;
+  }
+  30% {
+    color: #eeff00;
+  }
+  100% {
+    color: #ffffff;
+  }
 }
 
 .music-pause {

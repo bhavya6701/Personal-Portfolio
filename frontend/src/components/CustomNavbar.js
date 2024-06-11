@@ -61,7 +61,7 @@ export default function CustomNavbar() {
         <NavbarItem>
           <Link
             href="/#about"
-            className={`nav-link text-md lg:text-xl xl:lg:text-2xl icon ${
+            className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 0 ? "nav-active" : ""
             }`}
             onClick={() => updateNavCompActive(0)}
@@ -72,7 +72,7 @@ export default function CustomNavbar() {
         <NavbarItem>
           <Link
             href="/#timeline"
-            className={`nav-link text-md lg:text-xl xl:lg:text-2xl icon ${
+            className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 1 ? "nav-active" : ""
             }`}
             onClick={() => updateNavCompActive(1)}
@@ -83,7 +83,7 @@ export default function CustomNavbar() {
         <NavbarItem>
           <Link
             href="/#projects"
-            className={`nav-link text-md lg:text-xl xl:lg:text-2xl icon ${
+            className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 2 ? "nav-active" : ""
             }`}
             onClick={() => updateNavCompActive(2)}
@@ -94,7 +94,7 @@ export default function CustomNavbar() {
         <NavbarItem>
           <Link
             href="/#contact"
-            className={`nav-link text-md lg:text-xl xl:lg:text-2xl icon ${
+            className={`text-md lg:text-xl xl:lg:text-2xl icon ${
               navCompActive == 3 ? "nav-active" : ""
             }`}
             onClick={() => updateNavCompActive(3)}

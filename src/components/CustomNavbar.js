@@ -50,7 +50,7 @@ export default function CustomNavbar() {
           className="md:hidden"
         />
         <NavbarBrand>
-          <p className={`text-3xl ${font_pompiere.className} icon name`}>BR</p>
+          <p className={`text-3xl ${font_pompiere.className} icon name cursor-default`}>BR</p>
         </NavbarBrand>
       </NavbarContent>
 
@@ -121,7 +121,7 @@ export default function CustomNavbar() {
         </NavbarItem>
 
         <NavbarItem className="flex">
-          <Link className="text-2xl" onClick={updateAudioCommand}>
+          <div className="text-2xl cursor-pointer" onClick={updateAudioCommand}>
             <Icon
               icon="tabler:brand-netease-music"
               className={`icon ${
@@ -133,7 +133,7 @@ export default function CustomNavbar() {
               src="/assets/audio/Siddhi_Beyond_Paradise.mp3"
               loop={true}
             />
-          </Link>
+          </div>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>

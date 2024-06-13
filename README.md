@@ -1,6 +1,6 @@
 # Bhavya Ruparelia - Portfolio Website
 
-Welcome to the repository for my [personal portfolio website](bhavya-ruparelia-portfolio.vercel.app)!
+Welcome to the repository for my [portfolio website](bhavya-ruparelia-portfolio.vercel.app) :)
 
 This portfolio was created to present my academic background, work experience, and personal interests in a visually appealing and interactive way. The website is designed to be responsive and user-friendly.
 

@@ -1,22 +1,28 @@
-// Input component extends from shadcnui - https://ui.shadcn.com/docs/components/input
 "use client";
+
 import React, { useState, forwardRef } from "react";
 import { cn } from "@/utils/cn";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 
+// FormInput component
 export const FormInput = forwardRef(function FormInput(
   { className, type, ...props },
   ref
 ) {
+  // Hover effect
   const radius = 100; // change this to increase the radius of the hover effect
   const [visible, setVisible] = useState(false);
 
+  // Mouse position
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
+  // Mouse move handler
   function handleMouseMove({ currentTarget, clientX, clientY }) {
+    // Get the position of the input
     let { left, top } = currentTarget.getBoundingClientRect();
 
+    // Update mouse position
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   }

@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Pompiere } from "next/font/google";
 import { Icon } from "@iconify/react";
 import {
   Navbar,
@@ -14,18 +13,32 @@ import {
 } from "@nextui-org/react";
 import { Link } from "@nextui-org/link";
 
+import { Pompiere } from "next/font/google";
 const font_pompiere = Pompiere({ weight: "400", subsets: ["latin"] });
 
 export default function CustomNavbar() {
+  // Menu items for the navbar
+  const menuItems = ["ABOUT", "TIMELINE", "PROJECTS", "CONTACT"];
+
+  // States for menu, music, and active component
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const [navCompActive, setNavCompActive] = useState(0);
+
+  // Audio reference for music
   const audioRef = useRef();
 
+  // Update menu open state
+  const updateMenuOpen = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Update active component
   const updateNavCompActive = (index) => {
     setNavCompActive(index);
   };
 
+  // Update audio play/pause
   const updateAudioCommand = () => {
     if (isMusicPlaying) {
       audioRef.current.pause();
@@ -35,12 +48,11 @@ export default function CustomNavbar() {
     setIsMusicPlaying(!isMusicPlaying);
   };
 
-  const menuItems = ["ABOUT", "TIMELINE", "PROJECTS", "CONTACT"];
-
   return (
     <Navbar
       isBordered
       maxWidth={"full"}
+      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className="navbar"
     >
@@ -139,7 +151,7 @@ export default function CustomNavbar() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className="w-full icon" href="#" size="lg">
+            <Link className="w-full icon" href={`/#${item.toLowerCase()}`} size="lg" onClick={() => updateMenuOpen()}>
               {item}
             </Link>
           </NavbarMenuItem>

@@ -1,4 +1,5 @@
 'use client';
+
 import "./page.css";
 import "./styles.css";
 import About from "@/components/About";

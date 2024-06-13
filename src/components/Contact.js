@@ -1,29 +1,36 @@
 "use client";
-import React, { act } from "react";
-import { Arima } from "next/font/google";
-import { FormLabel } from "./aceternity_ui/FormLabel";
-import { FormInput } from "./aceternity_ui/FormInput";
+
+import React from "react";
 import { cn } from "@/utils/cn";
 import emailjs from "@emailjs/browser";
+import { FormLabel } from "./aceternity_ui/FormLabel";
+import { FormInput } from "./aceternity_ui/FormInput";
 
+import { Arima } from "next/font/google";
 const font_arima = Arima({ weight: "400", subsets: ["latin"] });
 
 export default function Contact() {
+  // Initialize emailjs
   emailjs.init("41DGlc-qRC3UkjabZ");
   
+  // Send email with emailjs
   function sendMail(e) {
     e.preventDefault();
+
+    // Get form data
     firstname = e.target.elements.firstname.value;
     lastname = e.target.elements.lastname.value;
     email = e.target.elements.email.value;
     message = e.target.elements.message.value;
-    console.log(firstname, lastname, email, message);
 
+    // Store form data in params
     var params = {
       from_name: firstname + " " + lastname,
       email_id: email,
       message: document.getElementById("message").value,
     };
+
+    // Send email
     emailjs.send("service_okmirvb", "template_cf231ki", params).then(() => {
       alert("Message sent!");
     });
@@ -40,7 +47,7 @@ export default function Contact() {
       >
         GET IN TOUCH
       </h1>
-      <div className="max-w-[1400px] w-full mx-auto rounded-none md:rounded-2xl p-4 shadow-input dark:bg-default-100/50 backdrop-blur-sm">
+      <div className="max-w-screen-xl mx-auto w-5/6 justify-self-center rounded-xl md:rounded-2xl p-4 shadow-input dark:bg-default-100/50 backdrop-blur-sm ">
         <form onSubmit={sendMail}>
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-6">
             <LabelInputContainer>

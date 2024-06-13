@@ -16,7 +16,6 @@
   animation: fadeInOutColorChange 5s forwards
 }
 
-/* One time gradient color change and back animation on nav-active header */
 @keyframes fadeInOutColorChange {
   0% {
     color: #00eeff;
@@ -110,4 +109,18 @@
 /* Project Section */
 .heading-color {
   color: #00eeffee;
+}
+
+/* Infinite Moving Cards - TimeLine Section */
+.moving-card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+
+
+/* Background */
+.canvas-style {
+  position: fixed;
+  z-index: -1;
 }

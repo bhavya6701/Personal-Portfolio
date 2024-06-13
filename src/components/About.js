@@ -2,13 +2,14 @@
 
 import React from "react";
 import Link from "next/link";
-import { Arima } from "next/font/google";
+import { Card, CardBody, Image } from "@nextui-org/react";
 import { InfiniteMovingCards } from "./aceternity_ui/InfiniteMovingCards";
-import { Card, CardBody, Image, Progress } from "@nextui-org/react";
 
+import { Arima } from "next/font/google";
 const font_arima = Arima({ weight: "400", subsets: ["latin"] });
 
-const testimonials = [
+// Technical Skills Data (Title, Knowledge, Experience)
+const technical_skills = [
   {
     title: "DSA",
     knowledge: 88,
@@ -104,9 +105,7 @@ const testimonials = [
 export default function About() {
   return (
     <div>
-      <Card
-        className="dark:bg-default-100/50 m-auto my-20 p-1 w-3/4 md:w-1/2 backdrop-blur-md"
-      >
+      <Card className="dark:bg-default-100/50 m-auto my-16 p-1 w-3/4 md:w-1/2 backdrop-blur-md">
         <CardBody>
           <div className="grid grid-cols-6 lg:grid-cols-12 items-center justify-center">
             <div className="relative col-span-6 lg:col-span-4 m-5">
@@ -145,7 +144,7 @@ export default function About() {
         </CardBody>
       </Card>
       <InfiniteMovingCards
-        items={testimonials}
+        items={technical_skills}
         direction="right"
         speed="fast"
       />

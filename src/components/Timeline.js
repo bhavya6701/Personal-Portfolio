@@ -1,14 +1,17 @@
 "use client";
-import React, { act } from "react";
+
+import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Icon } from "@iconify/react";
-import { Arima } from "next/font/google";
 
+import { Arima } from "next/font/google";
 const font_arima = Arima({ weight: "400", subsets: ["latin"] });
 
 export default function Timeline() {
+  // Keep track of the active accordion item
   const [isActive, setIsActive] = React.useState(-1);
 
+  // Update active accordion item
   const handleActive = (e, index) => {
     if (isActive == index) {
       setIsActive(-1);
@@ -28,7 +31,7 @@ export default function Timeline() {
       </h1>
       <Accordion
         variant="shadow"
-        className="p-4 flex flex-col gap-4 w-full max-w-[1200px] mx-auto dark:bg-default-100/50 backdrop-blur-md"
+        className="p-4 flex flex-col gap-4 max-w-screen-xl mx-auto w-5/6 dark:bg-default-100/50 backdrop-blur-md"
         itemClasses={{
           base: "rounded-lg p-4 border border-white border-opacity-40 dark:hover:bg-white/10",
           heading: "text-sm lg:text-lg",

@@ -1,11 +1,13 @@
 "use client";
-import React, { act } from "react";
-import { Arima } from "next/font/google";
+
+import React from "react";
 import { Card, CardBody } from "@nextui-org/react";
 
+import { Arima } from "next/font/google";
 const font_arima = Arima({ weight: "400", subsets: ["latin"] });
 
-const items = [
+// Projects Data (Title, Description, Header, Image, Link)
+const projects_data = [
   {
     title: "ASL Recognition",
     description:
@@ -55,8 +57,8 @@ export default function Projects() {
       >
         P R O J E C T S
       </h1>
-      <div className="p-4 gap-3 grid grid-cols-2 sm:grid-cols-2 max-w-[1400px] mx-auto rounded-xl dark:bg-default-100/50 backdrop-blur-sm">
-        {items.map((item, index) => (
+      <div className="p-4 gap-3 grid grid-cols-2 sm:grid-cols-2 max-w-screen-xl mx-auto w-5/6 rounded-xl dark:bg-default-100/50 backdrop-blur-sm">
+        {projects_data.map((item, index) => (
           <Card
             shadow="sm"
             key={index}
@@ -65,7 +67,7 @@ export default function Projects() {
             className="dark:bg-default-100/50 backdrop-blur-md dark:hover:bg-white/10"
           >
             <CardBody className="overflow-visible flex flex-row gap-2">
-              <div className="flex flex-col basis-7/12 text-center my-auto">
+              <div className="flex flex-col md:basis-7/12 text-center my-auto">
                
                 <div className="font-semibold text-xs md:text-base lg:text-lg p-2 px-6 heading-color">
                   {item.header}
@@ -74,7 +76,7 @@ export default function Projects() {
                   {item.description}
                 </div>
               </div>
-              <div className="flex flex-col gap-2 basis-5/12 p-1 my-auto">
+              <div className="hidden md:flex md:flex-col gap-2 md:basis-5/12 p-1 my-auto">
                 <img src={item.img} alt={item.title} className="rounded-lg" />
               </div>
             </CardBody>

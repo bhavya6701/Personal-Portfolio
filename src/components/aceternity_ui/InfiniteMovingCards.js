@@ -2,7 +2,6 @@
 
 import { cn } from "@/utils/cn";
 import React, { useEffect, useState, useRef } from "react";
-import "./InfiniteMovingCards.css";
 import { Progress } from "@nextui-org/react";
 
 export const InfiniteMovingCards = ({
@@ -12,9 +11,11 @@ export const InfiniteMovingCards = ({
   pauseOnHover = true,
   className,
 }) => {
+  // Container and scroller refs
   const containerRef = useRef(null);
   const scrollerRef = useRef(null);
 
+  // Add animation after 1 second
   useEffect(() => {
     const timer = setTimeout(() => {
       addAnimation();
@@ -22,6 +23,8 @@ export const InfiniteMovingCards = ({
 
     return () => clearTimeout(timer);
   }, []);
+
+  // Start animation
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
@@ -39,6 +42,8 @@ export const InfiniteMovingCards = ({
       setStart(true);
     }
   }
+
+  // Get direction and speed of the animation
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === "left") {
@@ -54,6 +59,8 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
+  // Get speed of the animation
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
@@ -61,15 +68,16 @@ export const InfiniteMovingCards = ({
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "120s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "160s");
+        containerRef.current.style.setProperty("--animation-duration", "180s");
       }
     }
   };
+
   return (
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_15%,white_85%,transparent)]",
+        "scroller relative z-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_15%,white_85%,transparent)] border border-default-300 ",
         className
       )}
     >
@@ -83,7 +91,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl border flex-shrink-0 border-slate-700 px-8 py-6 md:w-[350px] moving-card-background"
+            className="w-[350px] max-w-full relative rounded-2xl flex-shrink-0 px-8 py-6 md:w-[350px] dark:bg-default-100/70"
             key={item.title}
           >
             <div className="flex flex-col col-span-6 md:col-span-8">

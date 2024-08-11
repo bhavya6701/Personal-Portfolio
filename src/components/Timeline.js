@@ -62,9 +62,14 @@ export default function Timeline() {
           onPress={(e) => handleActive(e, 6)}
         >
           <ul>
-            <li className="list-inside">
-              • Currently Working on a project to automate the service desk
-              request on Jira.
+            <li>
+              • Developed a proof of concept for service desk automation using AI to handle dynamic requests.
+            </li>
+            <li>
+              • Performed back-end development to fix bugs and improve system stability using Java and AEM.
+            </li>
+            <li>
+              • Enhanced front-end user experience by making design adjustments and implementing changes with VueJS
             </li>
           </ul>
         </AccordionItem>
@@ -84,25 +89,19 @@ export default function Timeline() {
           onPress={(e) => handleActive(e, 5)}
         >
           <ul>
-            <li className="list-inside">
-              • Automated Privacy Masking for UbiHub (SD situational awareness
-              application) - Saves 10 mins per nodes of configuration and
-              enables turn key solutioning
+            <li>
+              • Automated privacy masking for UbiHub (SD situational awareness application) saving 10 minutes per node of
+              configuration and enabling turnkey solution implementation
             </li>
             <li>
-              • Investigation of UbiHub APQ resets and FPS issues using health
-              report data (temperature, memory, AIM) - Excluded temperature and
-              memory causes for APQ resetting.
+              • Investigated UbiHub APQ resets and FPS issues using health report data (temperature, memory, AIM)
             </li>
             <li>
-              • TVM3 Pole Detection and Vegetation encroachment detection - Made
-              POC solution involving zero-shot pole detection and depth model
-              for detecting encroaching vegetation - Evaluated the necessary
-              computational requirements to run these models on the edge.
+              • Developed TVM3 pole detection and vegetation encroachment detection POC solution with zero-shot pole detection and
+              depth model, and evaluated computational requirements for edge deployment.
             </li>
             <li>
-              • Night Image Vehicle Annotation - Set up annotation pipeline
-              using AI to automate over half the task.
+              • Set up night image vehicle annotation pipeline using AI to automate over half of the annotation tasks
             </li>
           </ul>
         </AccordionItem>

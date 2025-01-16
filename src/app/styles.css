@@ -73,7 +73,7 @@
 
   background-size: 300%;
   background-position: -100%;
-  animation: animate-name 30s linear 0s infinite alternate-reverse backwards;
+  animation: animate-name 20s linear 0s infinite alternate-reverse backwards;
 }
 
 @keyframes animate-name {

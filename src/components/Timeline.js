@@ -24,7 +24,7 @@ export default function Timeline() {
         <div>
             <div id="timeline"></div>
             <h1
-                className={`text-center text-2xl lg:text-5xl pt-28 mb-8 background-shadow tracking-[0.4em] ${font_arima.className}`}
+                className={`text-center text-2xl lg:text-5xl pt-28 mb-10 background-shadow tracking-[0.4em] ${font_arima.className}`}
             >
                 T I M E L I N E
             </h1>
@@ -43,15 +43,15 @@ export default function Timeline() {
                 showDivider={false}
             >
                 <AccordionItem
-                    key="6"
-                    aria-label="AI Developer Intern - Ubicquia Inc."
-                    title="AI Developer Intern - Ubicquia Inc."
-                    subtitle="Jan 2024 – April 2024 | September 2024 – December 2024"
+                    key="5"
+                    aria-label="Data Scientist - Ubicquia Inc."
+                    title="Data Scientist - Ubicquia Inc."
+                    subtitle="April 2025 – Present"
                     startContent={
                         <Icon
                             icon="material-symbols-light:developer-mode-tv-outline"
                             className={
-                                isActive == 6 ? "timeline-active-indicator" : ""
+                                isActive == 5 ? "timeline-active-indicator" : ""
                             }
                             width="2em"
                             height="2em"
@@ -60,7 +60,48 @@ export default function Timeline() {
                     itemClasses={{
                         indicator: "text-large timeline-active-indicator",
                     }}
-                    onPress={(e) => handleActive(e, 6)}
+                    onPress={(e) => handleActive(e, 5)}
+                >
+                    <ul>
+                        <li>
+                            • Developed and modularized advanced analytics for
+                            power infrastructure, including clustering of power
+                            loss and electrical anomalies (light flickering,
+                            under/over-voltage), improving fault detection and
+                            response efficiency.
+                        </li>
+                        <li>
+                            • Automated monthly Ubicell ROI report generation
+                            and built a dashboard, streamlining analytics
+                            delivery and enhancing visibility for stakeholders.
+                        </li>
+                        <li>
+                            • Designed and upgraded copper theft detection
+                            algorithms (V1 & V2) to improve accuracy and enable
+                            detection of simultaneous theft across node
+                            clusters, with emphasis on nighttime incidents.
+                        </li>
+                    </ul>
+                </AccordionItem>
+                <AccordionItem
+                    key="4"
+                    aria-label="AI Developer Intern - Ubicquia Inc."
+                    title="AI Developer Intern - Ubicquia Inc."
+                    subtitle="Jan 2024 – April 2024 | September 2024 – December 2024"
+                    startContent={
+                        <Icon
+                            icon="material-symbols-light:developer-mode-tv-outline"
+                            className={
+                                isActive == 4 ? "timeline-active-indicator" : ""
+                            }
+                            width="2em"
+                            height="2em"
+                        />
+                    }
+                    itemClasses={{
+                        indicator: "text-large timeline-active-indicator",
+                    }}
+                    onPress={(e) => handleActive(e, 4)}
                 >
                     <ul>
                         <li>
@@ -95,7 +136,7 @@ export default function Timeline() {
                     </ul>
                 </AccordionItem>
                 <AccordionItem
-                    key="5"
+                    key="3"
                     aria-label="Software Development Student - Bell Media"
                     title="Software Development Student - Bell Media"
                     subtitle="May 2024 – August 2024"
@@ -103,7 +144,7 @@ export default function Timeline() {
                         <Icon
                             icon="material-symbols-light:developer-mode-tv-outline"
                             className={
-                                isActive == 5 ? "timeline-active-indicator" : ""
+                                isActive == 3 ? "timeline-active-indicator" : ""
                             }
                             width="2em"
                             height="2em"
@@ -112,7 +153,7 @@ export default function Timeline() {
                     itemClasses={{
                         indicator: "text-large timeline-active-indicator",
                     }}
-                    onPress={(e) => handleActive(e, 5)}
+                    onPress={(e) => handleActive(e, 3)}
                 >
                     <ul>
                         <li>
@@ -134,7 +175,7 @@ export default function Timeline() {
                     </ul>
                 </AccordionItem>
                 <AccordionItem
-                    key="4"
+                    key="2"
                     aria-label="Junior Java Developer - Antea Canada Inc."
                     title="Junior Java Developer - Antea Canada Inc."
                     subtitle="Sept 2022 – April 2023"
@@ -142,13 +183,13 @@ export default function Timeline() {
                         <Icon
                             icon="material-symbols-light:developer-mode-tv-outline"
                             className={
-                                isActive == 4 ? "timeline-active-indicator" : ""
+                                isActive == 2 ? "timeline-active-indicator" : ""
                             }
                             width="2em"
                             height="2em"
                         />
                     }
-                    onPress={(e) => handleActive(e, 4)}
+                    onPress={(e) => handleActive(e, 2)}
                 >
                     <ul>
                         <li>
@@ -170,63 +211,10 @@ export default function Timeline() {
                     </ul>
                 </AccordionItem>
                 <AccordionItem
-                    key="3"
+                    key="1"
                     aria-label="Bachelors of Computer Science (Co-op)"
                     title="Bachelors of Computer Science (Co-op)"
                     subtitle="2021 - 2024"
-                    startContent={
-                        <Icon
-                            icon="map:university"
-                            className={
-                                isActive == 3 ? "timeline-active-indicator" : ""
-                            }
-                            width="2em"
-                            height="2em"
-                        />
-                    }
-                    onPress={(e) => handleActive(e, 3)}
-                >
-                    <ul>
-                        <li>• Institute: Concordia University</li>
-                        <li>• Location: Montreal, Quebec, Canada</li>
-                        <li>• Dean's List: 2021-2022</li>
-                        <li>• GPA: 3.72/4.30</li>
-                    </ul>
-                </AccordionItem>
-                <AccordionItem
-                    key="2"
-                    aria-label="Java Developer Intern - WeTheDevelopers"
-                    title="Java Developer Intern - WeTheDevelopers"
-                    subtitle="Sept 2020 – Dec 2020"
-                    startContent={
-                        <Icon
-                            icon="material-symbols-light:developer-mode-tv-outline"
-                            className={
-                                isActive == 2 ? "timeline-active-indicator" : ""
-                            }
-                            width="2em"
-                            height="2em"
-                        />
-                    }
-                    onPress={(e) => handleActive(e, 2)}
-                >
-                    <ul>
-                        <li>
-                            • Developed a music player application utilizing
-                            Java, XML, and Android Studio proficiency.
-                        </li>
-                        <li>
-                            • Rectified issues in mobile application projects at
-                            WeTheDevelopers during the development of my
-                            application.
-                        </li>
-                    </ul>
-                </AccordionItem>
-                <AccordionItem
-                    key="1"
-                    aria-label="Grade 12 (ISC Board)"
-                    title="Grade 12 (ISC Board)"
-                    subtitle="2020"
                     startContent={
                         <Icon
                             icon="map:university"
@@ -240,19 +228,20 @@ export default function Timeline() {
                     onPress={(e) => handleActive(e, 1)}
                 >
                     <ul>
-                        <li>• Institute: S N Kansagra School - TGES</li>
-                        <li>• Location: Rajkot, Gujarat, India</li>
-                        <li>• Grade: 94.5%</li>
+                        <li>• Institute: Concordia University</li>
+                        <li>• Location: Montreal, Quebec, Canada</li>
+                        <li>• Dean's List: 2021-2022</li>
+                        <li>• GPA: 3.72/4.30</li>
                     </ul>
                 </AccordionItem>
                 <AccordionItem
                     key="0"
-                    aria-label="Grade 10 (ICSE Board)"
-                    title="Grade 10 (ICSE Board)"
-                    subtitle="2018"
+                    aria-label="Java Developer Intern - WeTheDevelopers"
+                    title="Java Developer Intern - WeTheDevelopers"
+                    subtitle="Sept 2020 – Dec 2020"
                     startContent={
                         <Icon
-                            icon="map:university"
+                            icon="material-symbols-light:developer-mode-tv-outline"
                             className={
                                 isActive == 0 ? "timeline-active-indicator" : ""
                             }
@@ -263,9 +252,15 @@ export default function Timeline() {
                     onPress={(e) => handleActive(e, 0)}
                 >
                     <ul>
-                        <li>• Institute: S N Kansagra School - TGES</li>
-                        <li>• Location: Rajkot, Gujarat, India</li>
-                        <li>• Grade: 85%</li>
+                        <li>
+                            • Developed a music player application utilizing
+                            Java, XML, and Android Studio proficiency.
+                        </li>
+                        <li>
+                            • Rectified issues in mobile application projects at
+                            WeTheDevelopers during the development of my
+                            application.
+                        </li>
                     </ul>
                 </AccordionItem>
             </Accordion>
